@@ -31,9 +31,12 @@ const Navbar = () => {
                                 <li><Link href="/Donate" className=" hover:font-semibold hover:underline hover:text-blue-500">Donate Food</Link></li>
                                 <li><Link href="/Volunteer" className=" hover:font-semibold hover:underline hover:text-blue-500">Volunteer</Link></li>
                                 <li><Link href="/Needy" className=" hover:font-semibold hover:underline hover:text-blue-500">Get Food</Link></li>
-                                <li><Link href="/Contact" className=" hover:font-semibold hover:underline hover:text-blue-500">Contact</Link></li>
+                                <li><Link href="/signup" className="rounded-xl border-black border-2 p-3 bg-blue-200 hover:underline hover:bg-blue-300">Signup</Link></li>
+                                <li><Link href="/login" className=" hover:font-semibold hover:underline hover:text-blue-500">Login</Link></li>
+
 
                             </ul>
+                            
                         </nav>
 
                         {/* Mobile Menu Button */}

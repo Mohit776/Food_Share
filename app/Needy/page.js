@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 
 export default function FoodAssistanceForm() {
@@ -11,6 +12,8 @@ export default function FoodAssistanceForm() {
     requirements: "",
   });
 
+
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -21,6 +24,9 @@ export default function FoodAssistanceForm() {
 
   };
   const [donates, setDonates] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  
 
 
   useEffect(() => {
@@ -37,7 +43,7 @@ export default function FoodAssistanceForm() {
         <h1 className='font-bold text-3xl underline relative left-[28%]'>Available Food Points</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4 w-fit ml-8 bg-slate-100 m-4 h-3/4 overflow-y-auto rounded-lg">
 
-          {donates.map((Donate) => (
+          { donates.map((Donate) => (
             <div key={Donate._id} className="bg-white shadow-lg rounded-lg p-4">
               <h2 className="text-xl font-bold" >Name : {Donate.name}</h2>
               <p className="text-gray-600" >Food Type: {Donate.foodType}</p>
